@@ -9,21 +9,21 @@
 #define ULTRASONIC_H
 
 #include <stdint.h>
-#include "pico/stdlib.h"
 #include <stdio.h>
+#include "pico/stdlib.h"
 #include "hardware/gpio.h"
 #include "hardware/timer.h"
 
 class Ultrasonic
 {
     private:
-        const uint64_t timeout = 26100;
         uint8_t trig;
         uint8_t echo;
         void pinSetup();
         uint64_t getPulse();
     
     public:
+        Ultrasonic();
         Ultrasonic(uint8_t trigPin, uint8_t echoPin);
         uint64_t getDistance();
 };

@@ -1,6 +1,14 @@
 #include "ultrasonic.h"
 
 /**
+ * Default Constructor.
+ */ 
+Ultrasonic::Ultrasonic()
+{
+    trig = 0; echo = 0;
+}
+
+/**
  * Constructor for Ultrasonic class, calls pinSetup to initialize pins.
  * @param trigPin The pin on device connected to the trig pin on ultrasonic sensor.
  * @param echoPin The pin on device connected to the echo pin on ultrasonic sensor
@@ -31,6 +39,9 @@ void Ultrasonic::pinSetup()
  */ 
 uint64_t Ultrasonic::getPulse()
 {
+    uint64_t timeout = 26100;
+
+
     gpio_put(trig, 1);
     sleep_us(10);
     gpio_put(trig, 0);
