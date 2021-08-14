@@ -24,36 +24,44 @@ uint64_t Car::getDistance()
     return sum / measurments;
 }
 
-void Car::goForward()
+void Car::forward()
 {
     frontRight.setDirection(1);
     frontLeft.setDirection(1);
+    backRight.setDirection(1);
+    backLeft.setDirection(1);
+}
+
+void Car::reverse()
+{
+    frontRight.setDirection(-1);
+    frontLeft.setDirection(-1);
     backRight.setDirection(-1);
     backLeft.setDirection(-1);
 }
 
-void Car::goBack()
-{
-    frontRight.setDirection(-1);
-    frontLeft.setDirection(-1);
-    backRight.setDirection(1);
-    backLeft.setDirection(1);
-}
-
-void Car::turnRight()
+void Car::right()
 {
     frontRight.setDirection(1);
-    backRight.setDirection(-1);
-
-    frontLeft.setDirection(-1);
-    backLeft.setDirection(1);
-}
-
-void Car::turnLeft()
-{
-    frontRight.setDirection(-1);
     backRight.setDirection(1);
 
+    frontLeft.setDirection(-1);
+    backLeft.setDirection(-1);
+}
+
+void Car::left()
+{
+    frontRight.setDirection(-1);
+    backRight.setDirection(-1);
+
     frontLeft.setDirection(1);
-    backLeft.setDirection(-1); 
+    backLeft.setDirection(1); 
+}
+
+void Car::stop()
+{
+    frontRight.setDirection(0);
+    frontLeft.setDirection(0);
+    backRight.setDirection(0);
+    backLeft.setDirection(0);
 }

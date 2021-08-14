@@ -19,10 +19,11 @@ class Car
     public:
         Car(Motor front_right, Motor front_left, Motor back_right, Motor back_left, Ultrasonic ultrasonic_sensor);
         uint64_t getDistance();
-        void goForward();
-        void goBack();
-        void turnRight();
-        void turnLeft();
+        void forward();
+        void reverse();
+        void right();
+        void left();
+        void stop();
 };
 
 #endif
