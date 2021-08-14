@@ -14,6 +14,7 @@ class Motor
         int8_t direction;
 
     public:
+        Motor();
         Motor(uint8_t in1, uint8_t in2);
         void setDirection(int8_t direction);
         void reverse();

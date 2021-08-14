@@ -1,6 +1,15 @@
 #include "motor.h"
 
 /**
+ * Default constructor.
+ */ 
+Motor::Motor()
+{
+    in_1 = 0;
+    in_2 = 0;
+}
+
+/**
  * Constructor for Motor objects, takes pins for connection to motor as args
  *  and sets both to output.
  * @param in1 Pin number for forward motion.
