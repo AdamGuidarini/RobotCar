@@ -1397,9 +1397,9 @@ Discarded input sections
                 0x0000000000000000       0x2c ../car/libcar.a(car.cpp.obj)
  .text._ZN3Car8turnLeftEv
                 0x0000000000000000       0x2c ../car/libcar.a(car.cpp.obj)
- .text          0x0000000000000000        0x0 /tmp/cceV4zJj.o
- .data          0x0000000000000000        0x0 /tmp/cceV4zJj.o
- .bss           0x0000000000000000        0x0 /tmp/cceV4zJj.o
+ .text          0x0000000000000000        0x0 /tmp/cceN7LhG.o
+ .data          0x0000000000000000        0x0 /tmp/cceN7LhG.o
+ .bss           0x0000000000000000        0x0 /tmp/cceN7LhG.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000       0x10 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-atexit.o)
@@ -1620,11 +1620,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/cceV4zJj.o
+ .boot2         0x0000000010000000      0x100 /tmp/cceN7LhG.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x0000000010000100     0x4390
+.text           0x0000000010000100     0x43c0
                 0x0000000010000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x0000000010000100       0xd4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1984,34 +1984,38 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  .text.flash_get_unique_id
                 0x00000000100041b0       0x40 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
                 0x00000000100041b0                flash_get_unique_id
+ .text._ZN5MotorC2Ev
+                0x00000000100041f0        0x8 ../motor/libmotor.a(motor.cpp.obj)
+                0x00000000100041f0                Motor::Motor()
+                0x00000000100041f0                Motor::Motor()
  .text._ZN5MotorC2Ehh
-                0x00000000100041f0       0x2c ../motor/libmotor.a(motor.cpp.obj)
-                0x00000000100041f0                Motor::Motor(unsigned char, unsigned char)
-                0x00000000100041f0                Motor::Motor(unsigned char, unsigned char)
+                0x00000000100041f8       0x2c ../motor/libmotor.a(motor.cpp.obj)
+                0x00000000100041f8                Motor::Motor(unsigned char, unsigned char)
+                0x00000000100041f8                Motor::Motor(unsigned char, unsigned char)
  .text._ZN5Motor12setDirectionEa
-                0x000000001000421c       0x84 ../motor/libmotor.a(motor.cpp.obj)
-                0x000000001000421c                Motor::setDirection(signed char)
+                0x0000000010004224       0x84 ../motor/libmotor.a(motor.cpp.obj)
+                0x0000000010004224                Motor::setDirection(signed char)
  .text._ZN10UltrasonicC2Ev
-                0x00000000100042a0        0x8 ../ultrasonic/libultrasonic.a(ultrasonic.cpp.obj)
-                0x00000000100042a0                Ultrasonic::Ultrasonic()
-                0x00000000100042a0                Ultrasonic::Ultrasonic()
+                0x00000000100042a8        0x8 ../ultrasonic/libultrasonic.a(ultrasonic.cpp.obj)
+                0x00000000100042a8                Ultrasonic::Ultrasonic()
+                0x00000000100042a8                Ultrasonic::Ultrasonic()
  .text._ZN10UltrasonicC2Ehh
-                0x00000000100042a8       0x2c ../ultrasonic/libultrasonic.a(ultrasonic.cpp.obj)
-                0x00000000100042a8                Ultrasonic::Ultrasonic(unsigned char, unsigned char)
-                0x00000000100042a8                Ultrasonic::Ultrasonic(unsigned char, unsigned char)
+                0x00000000100042b0       0x2c ../ultrasonic/libultrasonic.a(ultrasonic.cpp.obj)
+                0x00000000100042b0                Ultrasonic::Ultrasonic(unsigned char, unsigned char)
+                0x00000000100042b0                Ultrasonic::Ultrasonic(unsigned char, unsigned char)
  .text._ZN10Ultrasonic11getDistanceEv
-                0x00000000100042d4       0xa8 ../ultrasonic/libultrasonic.a(ultrasonic.cpp.obj)
-                0x00000000100042d4                Ultrasonic::getDistance()
+                0x00000000100042dc       0xa8 ../ultrasonic/libultrasonic.a(ultrasonic.cpp.obj)
+                0x00000000100042dc                Ultrasonic::getDistance()
  .text._ZN3CarC2E5MotorS0_S0_S0_10Ultrasonic
-                0x000000001000437c       0x48 ../car/libcar.a(car.cpp.obj)
-                0x000000001000437c                Car::Car(Motor, Motor, Motor, Motor, Ultrasonic)
-                0x000000001000437c                Car::Car(Motor, Motor, Motor, Motor, Ultrasonic)
- .text          0x00000000100043c4       0x68 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x00000000100043c4                strlen
+                0x0000000010004384       0x70 ../car/libcar.a(car.cpp.obj)
+                0x0000000010004384                Car::Car(Motor, Motor, Motor, Motor, Ultrasonic)
+                0x0000000010004384                Car::Car(Motor, Motor, Motor, Motor, Ultrasonic)
+ .text          0x00000000100043f4       0x68 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x00000000100043f4                strlen
  *(.fini)
- .fini          0x000000001000442c        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
-                0x000000001000442c                _fini
- .fini.__stub   0x0000000010004430       0x60 linker stubs
+ .fini          0x000000001000445c        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
+                0x000000001000445c                _fini
+ .fini.__stub   0x0000000010004460       0x60 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2023,92 +2027,92 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x0000000010004490        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000010004490                . = ALIGN (0x4)
+ .eh_frame      0x00000000100044c0        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x00000000100044c0                . = ALIGN (0x4)
 
-.glue_7         0x0000000010004490        0x0
- .glue_7        0x0000000010004490        0x0 linker stubs
+.glue_7         0x00000000100044c0        0x0
+ .glue_7        0x00000000100044c0        0x0 linker stubs
 
-.glue_7t        0x0000000010004490        0x0
- .glue_7t       0x0000000010004490        0x0 linker stubs
+.glue_7t        0x00000000100044c0        0x0
+ .glue_7t       0x00000000100044c0        0x0 linker stubs
 
-.vfp11_veneer   0x0000000010004490        0x0
- .vfp11_veneer  0x0000000010004490        0x0 linker stubs
+.vfp11_veneer   0x00000000100044c0        0x0
+ .vfp11_veneer  0x00000000100044c0        0x0 linker stubs
 
-.v4_bx          0x0000000010004490        0x0
- .v4_bx         0x0000000010004490        0x0 linker stubs
+.v4_bx          0x00000000100044c0        0x0
+ .v4_bx         0x00000000100044c0        0x0 linker stubs
 
-.iplt           0x0000000010004490        0x0
- .iplt          0x0000000010004490        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x00000000100044c0        0x0
+ .iplt          0x00000000100044c0        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x0000000010004490      0x344
+.rodata         0x00000000100044c0      0x344
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.hardware_alarm_claim.str1.4
-                0x0000000010004490       0x22 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x00000000100044b2        0x2 
+                0x00000000100044c0       0x22 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x00000000100044e2        0x2 
  .rodata.panic.str1.4
-                0x00000000100044b4       0x12 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x00000000100044c6        0x2 
+                0x00000000100044e4       0x12 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x00000000100044f6        0x2 
  .rodata.hard_assertion_failure.str1.4
-                0x00000000100044c8        0xc CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000000100044f8        0xc CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata._ftoa.str1.4
-                0x00000000100044d4       0x15 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x00000000100044e9        0x3 
+                0x0000000010004504       0x15 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x0000000010004519        0x3 
  .rodata._vsnprintf
-                0x00000000100044ec      0x1e0 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x00000000100046cc        0x4 
+                0x000000001000451c      0x1e0 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x00000000100046fc        0x4 
  .rodata.pow10.5435
-                0x00000000100046d0       0x50 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010004700       0x50 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.str1.4
-                0x0000000010004720       0x3c CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010004750       0x3c CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x000000001000475c        0xc CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000478c        0xc CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x0000000010004768        0xc CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010004798        0xc CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x0000000010004774        0xc CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100047a4        0xc CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.5866
-                0x0000000010004780        0x2 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x0000000010004782        0x2 
+                0x00000000100047b0        0x2 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x00000000100047b2        0x2 
  .rodata._ZN5Motor12setDirectionEa.str1.4
-                0x0000000010004784       0x50 ../motor/libmotor.a(motor.cpp.obj)
-                0x00000000100047d4                . = ALIGN (0x4)
+                0x00000000100047b4       0x50 ../motor/libmotor.a(motor.cpp.obj)
+                0x0000000010004804                . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x00000000100047d4                . = ALIGN (0x4)
+                0x0000000010004804                . = ALIGN (0x4)
 
-.rel.dyn        0x00000000100047d4        0x0
- .rel.iplt      0x00000000100047d4        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x0000000010004804        0x0
+ .rel.iplt      0x0000000010004804        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000000100047d4                __exidx_start = .
+                0x0000000010004804                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000000100047d4                __exidx_end = .
-                0x00000000100047d4                . = ALIGN (0x4)
-                0x00000000100047d4                __binary_info_start = .
+                0x0000000010004804                __exidx_end = .
+                0x0000000010004804                . = ALIGN (0x4)
+                0x0000000010004804                __binary_info_start = .
 
-.binary_info    0x00000000100047d4       0x1c
+.binary_info    0x0000000010004804       0x1c
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x00000000100047d4        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010004804        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x00000000100047d8        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010004808        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x00000000100047dc        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000480c        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x00000000100047e0        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010004810        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x00000000100047e4        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010004814        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x00000000100047e8        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010004818        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x00000000100047ec        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000481c        0x4 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
-                0x00000000100047f0                __binary_info_end = .
-                0x00000000100047f0                . = ALIGN (0x4)
-                0x00000000100047f0                __etext = .
+                0x0000000010004820                __binary_info_end = .
+                0x0000000010004820                . = ALIGN (0x4)
+                0x0000000010004820                __etext = .
 
 .ram_vector_table
                 0x0000000020000000       0xc0
@@ -2117,7 +2121,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
                 0x0000000020000000       0xc0 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x0000000020000000                ram_vector_table
 
-.data           0x00000000200000c0      0x318 load address 0x00000000100047f0
+.data           0x00000000200000c0      0x318 load address 0x0000000010004820
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2208,33 +2212,33 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
                 0x00000000200003d8                __data_end__ = .
 
 .tm_clone_table
-                0x00000000200003d8        0x0 load address 0x0000000010004b08
+                0x00000000200003d8        0x0 load address 0x0000000010004b38
  .tm_clone_table
                 0x00000000200003d8        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x00000000200003d8        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x00000000200003d8        0x0 load address 0x0000000010004b08
+.igot.plt       0x00000000200003d8        0x0 load address 0x0000000010004b38
  .igot.plt      0x00000000200003d8        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x00000000200003d8        0x0 load address 0x0000000010004b08
+                0x00000000200003d8        0x0 load address 0x0000000010004b38
                 0x00000000200003d8                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x0000000020040000        0x0 load address 0x0000000010004b08
+.scratch_x      0x0000000020040000        0x0 load address 0x0000000010004b38
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x0000000010004b08                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x0000000010004b38                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x0000000010004b08
+.scratch_y      0x0000000020041000        0x0 load address 0x0000000010004b38
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x0000000010004b08                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x0000000010004b38                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x00000000200003d8      0x4d4
                 0x00000000200003d8                . = ALIGN (0x4)
@@ -2294,8 +2298,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x0000000010004b08        0x0
-                0x0000000010004b08                __flash_binary_end = .
+.flash_end      0x0000000010004b38        0x0
+                0x0000000010004b38                __flash_binary_end = .
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2377,7 +2381,7 @@ LOAD ../ultrasonic/libultrasonic.a
 LOAD ../car/libcar.a
 LOAD ../motor/libmotor.a
 LOAD ../ultrasonic/libultrasonic.a
-LOAD /tmp/cceV4zJj.o
+LOAD /tmp/cceN7LhG.o
 LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -2477,7 +2481,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000000000000648       0x2c ../car/libcar.a(car.cpp.obj)
  .ARM.attributes
-                0x0000000000000674       0x22 /tmp/cceV4zJj.o
+                0x0000000000000674       0x22 /tmp/cceN7LhG.o
  .ARM.attributes
                 0x0000000000000696       0x1e /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
