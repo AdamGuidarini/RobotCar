@@ -37,6 +37,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-sdk/cmake_install.cmake")
   include("/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/motor/cmake_install.cmake")
   include("/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/ultrasonic/cmake_install.cmake")
+  include("/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/car/cmake_install.cmake")
   include("/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car/cmake_install.cmake")
 
 endif()

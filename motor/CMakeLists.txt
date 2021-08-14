@@ -1,5 +1,5 @@
-add_library(rp2040_motor motor.h motor.cpp)
+add_library(motor motor.h motor.cpp)
 
-target_link_libraries(rp2040_motor  pico_stdlib hardware_gpio hardware_timer)
+target_link_libraries(motor  pico_stdlib hardware_gpio hardware_timer)
 
-target_include_directories(rp2040_motor PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
+target_include_directories(motor PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")

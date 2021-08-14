@@ -38,6 +38,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_MALLOC=1"
   "LIB_PICO_MEM_OPS=1"
   "LIB_PICO_MEM_OPS_PICO=1"
+  "LIB_PICO_MULTICORE=1"
   "LIB_PICO_PLATFORM=1"
   "LIB_PICO_PRINTF=1"
   "LIB_PICO_PRINTF_PICO=1"
@@ -113,6 +114,8 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_unique_id/include"
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_flash/include"
   "../ultrasonic"
+  "../car"
+  "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/include"
   )
 set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c" "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
@@ -159,6 +162,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c" "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj"
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c" "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c" "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
+  "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c" "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj"
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c" "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj"
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c" "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c" "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
@@ -191,6 +195,7 @@ set(CMAKE_TARGET_DEFINITIONS_C
   "LIB_PICO_MALLOC=1"
   "LIB_PICO_MEM_OPS=1"
   "LIB_PICO_MEM_OPS_PICO=1"
+  "LIB_PICO_MULTICORE=1"
   "LIB_PICO_PLATFORM=1"
   "LIB_PICO_PRINTF=1"
   "LIB_PICO_PRINTF_PICO=1"
@@ -266,6 +271,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_unique_id/include"
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_flash/include"
   "../ultrasonic"
+  "../car"
+  "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/c/Users/adamg/Documents/Projects/RobotCar/pico-car/main.cpp" "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car/CMakeFiles/main.dir/main.cpp.obj"
@@ -292,6 +299,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "LIB_PICO_MALLOC=1"
   "LIB_PICO_MEM_OPS=1"
   "LIB_PICO_MEM_OPS_PICO=1"
+  "LIB_PICO_MULTICORE=1"
   "LIB_PICO_PLATFORM=1"
   "LIB_PICO_PRINTF=1"
   "LIB_PICO_PRINTF_PICO=1"
@@ -367,12 +375,15 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_unique_id/include"
   "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_flash/include"
   "../ultrasonic"
+  "../car"
+  "/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/motor/CMakeFiles/rp2040_motor.dir/DependInfo.cmake"
-  "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/ultrasonic/CMakeFiles/rp2040_ultrasonic.dir/DependInfo.cmake"
+  "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/motor/CMakeFiles/motor.dir/DependInfo.cmake"
+  "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/ultrasonic/CMakeFiles/ultrasonic.dir/DependInfo.cmake"
+  "/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/car/CMakeFiles/car.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

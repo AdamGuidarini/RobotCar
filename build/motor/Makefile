@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /mnt/c/Users/adamg/Documents/Projects/RobotCar/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,19 +111,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-motor/CMakeFiles/rp2040_motor.dir/rule:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/rp2040_motor.dir/rule
-.PHONY : motor/CMakeFiles/rp2040_motor.dir/rule
+motor/CMakeFiles/motor.dir/rule:
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f CMakeFiles/Makefile2 motor/CMakeFiles/motor.dir/rule
+.PHONY : motor/CMakeFiles/motor.dir/rule
 
 # Convenience name for target.
-rp2040_motor: motor/CMakeFiles/rp2040_motor.dir/rule
+motor: motor/CMakeFiles/motor.dir/rule
 
-.PHONY : rp2040_motor
+.PHONY : motor
 
 # fast build rule for target.
-rp2040_motor/fast:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/build
-.PHONY : rp2040_motor/fast
+motor/fast:
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/build
+.PHONY : motor/fast
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
@@ -131,7 +131,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -140,7 +140,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -149,7 +149,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
@@ -158,7 +158,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_cor
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -167,7 +167,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_cor
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -176,7 +176,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_cor
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
@@ -185,7 +185,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.ob
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -194,7 +194,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.i:
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -203,7 +203,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.s:
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.obj
@@ -212,7 +212,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.obj:
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.i
@@ -221,7 +221,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.i: m
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.s
@@ -230,7 +230,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.s: m
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/sem.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.obj
@@ -239,7 +239,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.obj
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.i
@@ -248,7 +248,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.i: 
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.s
@@ -257,7 +257,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.s: 
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/time.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
@@ -266,7 +266,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -275,7 +275,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -284,7 +284,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.obj
@@ -293,7 +293,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.i
@@ -302,7 +302,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.s
@@ -311,7 +311,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/datetime.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.obj
@@ -320,7 +320,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.ob
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.i
@@ -329,7 +329,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.i:
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.s
@@ -338,7 +338,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.s:
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.obj
@@ -347,7 +347,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.ob
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.i
@@ -356,7 +356,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.i:
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.s
@@ -365,7 +365,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.s:
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_util/queue.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
@@ -374,7 +374,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
@@ -383,7 +383,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
@@ -392,7 +392,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
@@ -401,7 +401,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clock
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -410,7 +410,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clock
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -419,7 +419,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clock
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
@@ -428,7 +428,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_divid
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
@@ -437,7 +437,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -446,7 +446,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -455,7 +455,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
@@ -464,7 +464,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/i
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -473,7 +473,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/i
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -482,7 +482,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/i
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
@@ -491,7 +491,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/i
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
@@ -500,7 +500,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/p
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -509,7 +509,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/p
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -518,7 +518,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/p
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
@@ -527,7 +527,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -536,7 +536,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -545,7 +545,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
@@ -554,7 +554,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -563,7 +563,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -572,7 +572,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
@@ -581,7 +581,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -590,7 +590,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -599,7 +599,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
@@ -608,7 +608,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -617,7 +617,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -626,7 +626,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
@@ -635,7 +635,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watch
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -644,7 +644,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watch
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -653,7 +653,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watch
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
@@ -662,7 +662,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -671,7 +671,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -680,7 +680,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -689,7 +689,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bit_ops/b
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
@@ -698,7 +698,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/b
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -707,7 +707,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/b
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -716,7 +716,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/b
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
@@ -725,7 +725,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_divider/d
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
@@ -734,7 +734,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
@@ -743,7 +743,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
@@ -752,7 +752,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
@@ -761,7 +761,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
@@ -770,7 +770,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -779,7 +779,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -788,7 +788,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
@@ -797,7 +797,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
@@ -806,7 +806,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
@@ -815,7 +815,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
@@ -824,7 +824,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
@@ -833,7 +833,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
@@ -842,7 +842,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -851,7 +851,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -860,7 +860,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
@@ -869,7 +869,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
@@ -878,7 +878,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_int64_ops
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
@@ -887,7 +887,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pi
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
@@ -896,7 +896,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pi
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
@@ -905,7 +905,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pi
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
@@ -914,7 +914,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_mem_ops/m
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
@@ -923,7 +923,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
@@ -932,7 +932,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
@@ -941,7 +941,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
@@ -950,7 +950,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/pr
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -959,7 +959,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/pr
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -968,7 +968,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/pr
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
@@ -977,7 +977,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/r
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -986,7 +986,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/r
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -995,7 +995,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/r
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
@@ -1004,7 +1004,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
@@ -1013,7 +1013,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
@@ -1022,7 +1022,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1031,7 +1031,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
@@ -1040,7 +1040,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
@@ -1049,7 +1049,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
@@ -1058,7 +1058,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
@@ -1067,7 +1067,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/std
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -1076,7 +1076,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/std
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -1085,7 +1085,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/std
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
@@ -1094,7 +1094,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uar
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
@@ -1103,7 +1103,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uar
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
@@ -1112,7 +1112,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uar
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -1121,7 +1121,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/st
 
 # target to build an object file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -1130,7 +1130,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/st
 
 # target to preprocess a source file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -1139,7 +1139,7 @@ mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/st
 
 # target to generate assembly for a file
 mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 motor.obj: motor.cpp.obj
@@ -1148,7 +1148,7 @@ motor.obj: motor.cpp.obj
 
 # target to build an object file
 motor.cpp.obj:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/motor.cpp.obj
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/motor.cpp.obj
 .PHONY : motor.cpp.obj
 
 motor.i: motor.cpp.i
@@ -1157,7 +1157,7 @@ motor.i: motor.cpp.i
 
 # target to preprocess a source file
 motor.cpp.i:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/motor.cpp.i
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/motor.cpp.i
 .PHONY : motor.cpp.i
 
 motor.s: motor.cpp.s
@@ -1166,7 +1166,7 @@ motor.s: motor.cpp.s
 
 # target to generate assembly for a file
 motor.cpp.s:
-	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/motor.cpp.s
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build && $(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/motor.cpp.s
 .PHONY : motor.cpp.s
 
 # Help Target
@@ -1175,9 +1175,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... rp2040_motor"
+	@echo "... rebuild_cache"
+	@echo "... motor"
 	@echo "... mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.obj"
 	@echo "... mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.i"
 	@echo "... mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/critical_section.s"

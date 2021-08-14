@@ -150,30 +150,43 @@ bs2_default/fast:
 .PHONY : bs2_default/fast
 
 #=============================================================================
-# Target rules for targets named rp2040_motor
+# Target rules for targets named motor
 
 # Build rule for target.
-rp2040_motor: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rp2040_motor
-.PHONY : rp2040_motor
+motor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 motor
+.PHONY : motor
 
 # fast build rule for target.
-rp2040_motor/fast:
-	$(MAKE) -f motor/CMakeFiles/rp2040_motor.dir/build.make motor/CMakeFiles/rp2040_motor.dir/build
-.PHONY : rp2040_motor/fast
+motor/fast:
+	$(MAKE) -f motor/CMakeFiles/motor.dir/build.make motor/CMakeFiles/motor.dir/build
+.PHONY : motor/fast
 
 #=============================================================================
-# Target rules for targets named rp2040_ultrasonic
+# Target rules for targets named ultrasonic
 
 # Build rule for target.
-rp2040_ultrasonic: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rp2040_ultrasonic
-.PHONY : rp2040_ultrasonic
+ultrasonic: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ultrasonic
+.PHONY : ultrasonic
 
 # fast build rule for target.
-rp2040_ultrasonic/fast:
-	$(MAKE) -f ultrasonic/CMakeFiles/rp2040_ultrasonic.dir/build.make ultrasonic/CMakeFiles/rp2040_ultrasonic.dir/build
-.PHONY : rp2040_ultrasonic/fast
+ultrasonic/fast:
+	$(MAKE) -f ultrasonic/CMakeFiles/ultrasonic.dir/build.make ultrasonic/CMakeFiles/ultrasonic.dir/build
+.PHONY : ultrasonic/fast
+
+#=============================================================================
+# Target rules for targets named car
+
+# Build rule for target.
+car: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 car
+.PHONY : car
+
+# fast build rule for target.
+car/fast:
+	$(MAKE) -f car/CMakeFiles/car.dir/build.make car/CMakeFiles/car.dir/build
+.PHONY : car/fast
 
 #=============================================================================
 # Target rules for targets named ELF2UF2Build
@@ -212,8 +225,9 @@ help:
 	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... bs2_default_bin"
 	@echo "... bs2_default"
-	@echo "... rp2040_motor"
-	@echo "... rp2040_ultrasonic"
+	@echo "... motor"
+	@echo "... ultrasonic"
+	@echo "... car"
 	@echo "... ELF2UF2Build"
 	@echo "... main"
 .PHONY : help

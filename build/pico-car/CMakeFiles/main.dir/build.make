@@ -840,6 +840,19 @@ pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s"
 	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c -o CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
+pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj: pico-car/CMakeFiles/main.dir/flags.make
+pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj: /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj"
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj   -c /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c
+
+pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i"
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c > CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+
+pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s"
+	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c -o CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.obj" \
@@ -908,7 +921,8 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj" \
 "CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj" \
 "CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj" \
-"CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj"
+"CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj" \
+"CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -980,12 +994,16 @@ pico-car/main.elf: pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Proj
 pico-car/main.elf: pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 pico-car/main.elf: pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 pico-car/main.elf: pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+pico-car/main.elf: pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
 pico-car/main.elf: pico-car/CMakeFiles/main.dir/build.make
-pico-car/main.elf: motor/librp2040_motor.a
-pico-car/main.elf: ultrasonic/librp2040_ultrasonic.a
+pico-car/main.elf: motor/libmotor.a
+pico-car/main.elf: ultrasonic/libultrasonic.a
+pico-car/main.elf: car/libcar.a
+pico-car/main.elf: motor/libmotor.a
+pico-car/main.elf: ultrasonic/libultrasonic.a
 pico-car/main.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 pico-car/main.elf: pico-car/CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Linking CXX executable main.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/adamg/Documents/Projects/RobotCar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Linking CXX executable main.elf"
 	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car && /usr/bin/arm-none-eabi-objcopy -Oihex main.elf main.hex
 	cd /mnt/c/Users/adamg/Documents/Projects/RobotCar/build/pico-car && /usr/bin/arm-none-eabi-objcopy -Obinary main.elf main.bin

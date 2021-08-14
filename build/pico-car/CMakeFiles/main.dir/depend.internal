@@ -1500,6 +1500,42 @@ pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
  generated/pico_base/pico/config_autogen.h
  generated/pico_base/pico/version.h
+pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/boards/include/boards/pico.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_base/include/pico.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_base/include/pico/assert.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_base/include/pico/config.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_base/include/pico/error.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_base/include/pico/types.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/include/pico/sem.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/include/pico/sync.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/include/pico/time.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/psm.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_claim/include/hardware/claim.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/include/pico/multicore.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_runtime/include/pico/runtime.h
+ generated/pico_base/pico/config_autogen.h
+ generated/pico_base/pico/version.h
 pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/boards/include/boards/pico.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_base/include/pico.h
@@ -1889,6 +1925,7 @@ pico-car/CMakeFiles/main.dir/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/
  generated/pico_base/pico/config_autogen.h
  generated/pico_base/pico/version.h
 pico-car/CMakeFiles/main.dir/main.cpp.obj
+ ../car/car.h
  ../motor/motor.h
  ../ultrasonic/ultrasonic.h
  /mnt/c/Users/adamg/Documents/Projects/RobotCar/pico-car/main.cpp
@@ -1899,6 +1936,11 @@ pico-car/CMakeFiles/main.dir/main.cpp.obj
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_base/include/pico/error.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_base/include/pico/types.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/include/pico/sem.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_sync/include/pico/sync.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/common/pico_time/include/pico/time.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
@@ -1914,8 +1956,10 @@ pico-car/CMakeFiles/main.dir/main.cpp.obj
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h
+ /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_multicore/include/pico/multicore.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h
  /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h

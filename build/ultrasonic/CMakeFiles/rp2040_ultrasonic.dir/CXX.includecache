@@ -172,10 +172,6 @@ pico/types.h
 hardware/platform_defs.h
 /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/hardware/platform_defs.h
 
-/mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp
-cstdlib
--
-
 /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h
 pico.h
 /mnt/c/Users/adamg/Documents/Projects/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/pico.h

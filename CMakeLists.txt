@@ -16,4 +16,5 @@ pico_sdk_init()
 # The rest
 add_subdirectory(motor)
 add_subdirectory(ultrasonic)
+add_subdirectory(car)
 add_subdirectory(pico-car)
