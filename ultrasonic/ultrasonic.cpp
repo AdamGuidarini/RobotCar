@@ -46,7 +46,7 @@ uint64_t Ultrasonic::getPulse()
     sleep_us(10);
     gpio_put(trig, 0);
 
-    uint64_t dist = 0;
+    uint64_t duration = 0;
 
     while (gpio_get(echo) == 0)
     {
@@ -57,10 +57,10 @@ uint64_t Ultrasonic::getPulse()
 
     while (gpio_get(echo) == 1)
     {
-        dist++;
+        duration++;
         sleep_us(1);
         
-        if (dist > timeout)
+        if (duration > timeout)
             return 0;
     }
 
