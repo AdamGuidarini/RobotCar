@@ -92,15 +92,20 @@ void Car::drive()
 {
     while(true)
     {
+        const int delayTime = motorPulseDelay();
         distance = ultrasonic.getDistance();
 
-        if (distance > stopDistance)
-        {
-            forward();
-        }
-        else
-        {
-            chooseDirection();
-        }
+        distance > stopDistance ? forward() : chooseDirection();
+
+        busy_wait_ms(delayTime);
+
+        stop();
+
+        busy_wait_ms(delayTime);
     }
+}
+
+int Car::motorPulseDelay()
+{
+    return distance > 0 ? distance / 100 : 100;
 }
