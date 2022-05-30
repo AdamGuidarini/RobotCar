@@ -97,15 +97,26 @@ void Car::drive()
 
         distance > stopDistance ? forward() : chooseDirection();
 
-        busy_wait_ms(delayTime);
+        sleep_ms(delayTime);
 
         stop();
 
-        busy_wait_ms(delayTime);
+        sleep_ms(delayTime);
     }
 }
 
 int Car::motorPulseDelay()
 {
-    return distance > 0 ? distance / 100 : 100;
+    if (distance >= 450)
+        return 0;
+    else if (distance >= 300)
+        return 100;
+    else if (distance >= 200)
+        return 250;
+    else if (distance >= 100)
+        return 300;
+    else if (distance >= 50)
+        return 350;
+    else
+        return 400;
 }
