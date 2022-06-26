@@ -21,6 +21,7 @@ class Car
         void right();
         void left();
         void stop();
+        void stop_us(uint32_t stopTime);
         void chooseDirection();
         int motorPulseDelay();
 

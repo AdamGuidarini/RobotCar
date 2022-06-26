@@ -1,5 +1,3 @@
-add_library(drive drive.h drive.cpp)
-
 add_executable(main main.cpp)
 
 target_link_libraries(main car motor ultrasonic car pico_stdlib)
