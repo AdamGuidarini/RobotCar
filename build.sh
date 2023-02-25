@@ -7,6 +7,18 @@ fi
 
 # build container if not exists
 if [ "$(docker images -q ubuntu-pico 2> /dev/null)" = "" ]; then
-    docker build -t ubuntu-pico -f Dockerfile.build . || exit 1
+    echo "Building docker container"
+    docker build -t ubuntu-pico -f dockerfile . || exit 1
 fi
-docker run -p 5000:22 -it ubuntu-pico /bin/bash
+
+# Run container and compile program
+docker run -u root                                          \
+    --privileged=true                                       \
+    --entrypoint=/bin/bash                                  \
+    --rm -i                                                 \
+    --mount type=bind,source="$(pwd)",target=/root/RobotCar \
+    ubuntu-pico << COMMANDS
+    cd /root/RobotCar/build;
+    cmake ..;
+    make -j$(nproc);
+COMMANDS
