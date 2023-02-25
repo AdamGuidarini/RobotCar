@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.13.0)
 
-find_program(Docker_EXECUTABLE docker)
-if(NOT Docker_EXECUTABLE)
-    message(FATAL_ERROR "Cannot find the docker executable")
+if (NOT DEFINED PICO_SDK_PATH)
+    set(PICO_SDK_PATH "/root/pico-sdk")
 endif()
 
 # initialize the SDK based on PICO_SDK_PATH
