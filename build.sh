@@ -24,5 +24,7 @@ sudo docker run -u root                                          \
 COMMANDS
 
 if [[ -d "/run/media/$(whoami)/RPI-RP2" ]]; then
-    cp build/elf2uf2/elf2uf2 /run/media/$(whoami)/RPI-RP2
+    echo "Flashing program to Pico...";
+    cp build/elf2uf2/elf2uf2 /run/media/$(whoami)/RPI-RP2;
+    echo "done!"
 fi
