@@ -95,22 +95,21 @@ void Car::drive()
 {
     while(true)
     {
-        // TODO figure out how to pulse motors without borking everything
-        // uint32_t delayTime = motorPulseDelay();
+        uint32_t delayTime = motorPulseDelay();
         distance = ultrasonic.getDistance();
 
         distance > stopDistance ? forward() : chooseDirection();
 
-        // if (delayTime > 0) 
-        // {
-        //     gpio_put(25, 1);
-        //     busy_wait_ms(delayTime * 2);
+        if (delayTime > 0) 
+        {
+            gpio_put(25, 1);
+            busy_wait_us(delayTime * 2);
 
-        //     stop();
+            stop();
 
-        //     gpio_put(25, 0);
-        //     busy_wait_us(delayTime);
-        // }
+            gpio_put(25, 0);
+            busy_wait_us(delayTime );
+        }
     }
 }
 
@@ -119,11 +118,12 @@ int Car::motorPulseDelay()
     if (distance >= 450)
         return 0;
     else if (distance >= 300)
-        return 100;
+        return 5;
     else if (distance >= 200)
-        return 250;
+        return 10;
     else if (distance >= 100)
-        return 300;
+        return 15;
 
-    return 350;
+    return 20;
 }
+ 
