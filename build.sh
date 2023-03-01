@@ -25,6 +25,6 @@ COMMANDS
 
 if [[ -d "/run/media/$(whoami)/RPI-RP2" ]]; then
     echo "Flashing program to Pico...";
-    cp build/elf2uf2/elf2uf2 /run/media/$(whoami)/RPI-RP2;
+    cp build/pico-car/main.uf2 /run/media/$(whoami)/RPI-RP2;
     echo "done!"
 fi
