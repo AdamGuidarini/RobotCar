@@ -9,10 +9,6 @@
 #define ULTRASONIC_H
 
 #include <stdint.h>
-#include <stdio.h>
-#include "pico/stdlib.h"
-#include "hardware/gpio.h"
-#include "hardware/timer.h"
 
 class Ultrasonic
 {

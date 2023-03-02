@@ -4,7 +4,6 @@
 #include <cstdint>
 #include "motor.h"
 #include "ultrasonic.h"
-#include "pico/stdlib.h"
 
 class Car
 {
