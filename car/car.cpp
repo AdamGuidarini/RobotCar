@@ -1,5 +1,6 @@
 #include "car.h"
 #include "pico/stdlib.h"
+#include <string>
 
 Car::Car(Motor front_right, Motor front_left, Motor back_right, Motor back_left, Ultrasonic ultrasonic_sensor)
 {
@@ -103,13 +104,9 @@ void Car::drive()
 
         if (delayTime > 0) 
         {
-            gpio_put(25, 1);
             busy_wait_us(delayTime * 2);
 
             stop();
-
-            gpio_put(25, 0);
-            // busy_wait_us(delayTime );
         }
     }
 }
