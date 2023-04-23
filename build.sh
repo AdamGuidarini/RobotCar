@@ -12,6 +12,8 @@ if [ "$(docker images -q ubuntu-pico 2> /dev/null)" = "" ]; then
 fi
 
 # Run container and compile program
+sudo systemctl start docker
+
 sudo docker run -u root                                          \
     --privileged=true                                       \
     --entrypoint=/bin/bash                                  \
