@@ -9,4 +9,5 @@ RUN set -ex;                                                                    
     cd $HOME;                                                                                                  \
     apt install git -y;                                                                                        \
     git clone https://github.com/raspberrypi/pico-sdk.git;                                                     \
+    git submodule update --init;                                                                               \
     echo "PICO_SDK_PATH='$HOME/pico-sdk'" >> $HOME/.bashrc;

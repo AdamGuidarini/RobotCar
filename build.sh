@@ -5,6 +5,8 @@ if [ ! -d build ]; then
     mkdir build
 fi
 
+sudo systemctl start docker
+
 # build container if not exists
 if [ "$(docker images -q ubuntu-pico 2> /dev/null)" = "" ]; then
     echo "Building docker container"
